@@ -1,4 +1,4 @@
-declare module "moleculer-io" {
+declare module "moleculer-io-plus" {
 	import { DefaultEventsMap, EventsMap } from "socket.io/dist/typed-events";
 	import { Client } from "socket.io/dist/client";
 

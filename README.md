@@ -10,7 +10,7 @@
 [![Known Vulnerabilities](https://snyk.io/test/github/moleculerjs/moleculer-io/badge.svg)](https://snyk.io/test/github/moleculerjs/moleculer-io)
 [![Downloads](https://img.shields.io/npm/dm/moleculer-io.svg)](https://www.npmjs.com/package/moleculer-io)
 
-<h1>Moleculer-io</h1>
+<h1>Moleculer-io-plus</h1>
 
 The `moleculer-io` is a Websocket gateway service for [Moleculer](https://github.com/moleculerjs/moleculer) using `socket.io`.
 
@@ -25,7 +25,7 @@ The `moleculer-io` is a Websocket gateway service for [Moleculer](https://github
 <h1>Install</h1>
 
 ```shell
-$ npm install moleculer-io
+$ npm install moleculer-io-plus
 ```
 
 <h1>Table of contents</h1>

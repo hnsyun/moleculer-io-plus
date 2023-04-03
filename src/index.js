@@ -89,6 +89,15 @@ module.exports = {
 			if (item.createNamespace !== false) this.registerNamespace(nsp, nsp, item);
 		});
 
+		const events = this.settings.io.eventsRegistry;
+
+		Object.keys(events).forEach(eventName => {
+			const handler = events[eventName];
+			if (typeof handler !== "function") return;
+
+			this.registryEvent(eventName, handler);
+		});
+
 		this.logger.info("Socket.IO Websocket Gateway started.");
 	},
 
@@ -317,7 +326,17 @@ module.exports = {
 				}
 			});
 		},
-
+		/**
+		 * @description: registry event like `on("connection")`
+		 * @param {String} eventName 事件名
+		 * @param {String} handler 函数
+		 * @return {*}
+		 */
+		registryEvent(eventName, handler) {
+			if (this.io) {
+				this.io.on(eventName, handler);
+			}
+		},
 		/**
 		 * Initialize Socket.io server
 		 *
